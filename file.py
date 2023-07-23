@@ -40,15 +40,18 @@ def find_substring_between_chars(input_string, start_char, end_char):
         return substring
     else:
         return None
-    
-create_directory('Data')
-create_directory('Data/M')
-create_directory('Data/F')
-create_directory('Data/O')
-for i in range(20,100,5):
-    create_directory(f'Data/{i}-{i+5}')
 
 directory_path = 'Screenshots'
+output_path = 'Data/'
+
+create_directory(output_path)
+create_directory(output_path+'M')
+create_directory(output_path+'F')
+create_directory(output_path+'O')
+for i in range(20,100,5):
+    create_directory(output_path+f'{i}-{i+5}')
+
+
 
 file_names = get_file_names_from_directory(directory_path)
 
@@ -56,42 +59,42 @@ for name in file_names:
     result = find_substring_between_chars(name,'_','Y')
     result = int(result)
     if result >= 20 and result <= 25:
-        copy_file(directory_path+'/'+name,'Data/20-25')
+        copy_file(directory_path+'/'+name,output_path+'20-25')
     elif result > 25 and result <= 30:
-        copy_file(directory_path+'/'+name,'Data/25-30')
+        copy_file(directory_path+'/'+name,output_path+'25-30')
     elif result > 30 and result <= 35:
-        copy_file(directory_path+'/'+name,'Data/30-35')
+        copy_file(directory_path+'/'+name,output_path+'30-35')
     elif result > 35 and result <= 40:
-        copy_file(directory_path+'/'+name,'Data/35-40')
+        copy_file(directory_path+'/'+name,output_path+'35-40')
     elif result > 40 and result <= 45:
-        copy_file(directory_path+'/'+name,'Data/40-45')
+        copy_file(directory_path+'/'+name,output_path+'40-45')
     elif result > 45 and result <= 50:
-        copy_file(directory_path+'/'+name,'Data/45-50')
+        copy_file(directory_path+'/'+name,output_path+'45-50')
     elif result > 50 and result <= 55:
-        copy_file(directory_path+'/'+name,'Data/50-55')
+        copy_file(directory_path+'/'+name,output_path+'50-55')
     elif result > 55 and result <= 60:
-        copy_file(directory_path+'/'+name,'Data/55-60')
+        copy_file(directory_path+'/'+name,output_path+'55-60')
     elif result > 60 and result <= 65:
-        copy_file(directory_path+'/'+name,'Data/60-65')
+        copy_file(directory_path+'/'+name,output_path+'60-65')
     elif result > 65 and result <= 70:
-        copy_file(directory_path+'/'+name,'Data/65-70')
+        copy_file(directory_path+'/'+name,output_path+'65-70')
     elif result > 70 and result <= 75:
-        copy_file(directory_path+'/'+name,'Data/70-75')
+        copy_file(directory_path+'/'+name,output_path+'70-75')
     elif result > 75 and result <= 80:
-        copy_file(directory_path+'/'+name,'Data/75-80')
+        copy_file(directory_path+'/'+name,output_path+'75-80')
     elif result > 80 and result <= 85:
-        copy_file(directory_path+'/'+name,'Data/80-85')
+        copy_file(directory_path+'/'+name,output_path+'80-85')
     elif result > 85 and result <= 90:
-        copy_file(directory_path+'/'+name,'Data/85-90')
+        copy_file(directory_path+'/'+name,output_path+'85-90')
     elif result > 90 and result <= 95:
-        copy_file(directory_path+'/'+name,'Data/90-95')
+        copy_file(directory_path+'/'+name,output_path+'90-95')
     elif result >= 95 and result <= 100:
-        copy_file(directory_path+'/'+name,'Data/95-100')
+        copy_file(directory_path+'/'+name,output_path+'95-100')
 
     result2 = find_substring_between_chars(name,',','_')
     if result2 == 'M':
-        copy_file(directory_path+'/'+name,'Data/M')
+        copy_file(directory_path+'/'+name,output_path+'M')
     elif result2 == 'F':
-        copy_file(directory_path+'/'+name,'Data/F')
+        copy_file(directory_path+'/'+name,output_path+'F')
     elif result2 == 'O':
-        copy_file(directory_path+'/'+name,'Data/O')
+        copy_file(directory_path+'/'+name,output_path+'O')
